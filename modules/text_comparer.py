@@ -70,7 +70,8 @@ class TextComparer():
         workers = multiprocessing.cpu_count()
         with ProcessPoolExecutor(workers) as ex:
             results = ex.map(self.avg_vowels, self.filenames)
-        return list(results)
+            print(results)
+        # return list(results)
 
     def hardest_read2(self):
         read = multiprocessing(avg_vowels, url_list)
